@@ -85,6 +85,14 @@ class InputView: UIView {
     
     private let currentHashLabel = UILabel()
     
+    private lazy var findButton: UIButton = {
+        let view = UIButton(configuration: UIButton.Configuration.tinted(), primaryAction: UIAction(handler: { _ in
+            self.viewModel.findCorrectNonce()
+        }))
+        view.setTitle("Auto", for: .normal)
+        return view
+    }()
+    
     private lazy var addButton: UIButton = {
         let view = UIButton(configuration: UIButton.Configuration.tinted(), primaryAction: UIAction(handler: { _ in
             self.viewModel.createNewBlock()
@@ -94,7 +102,7 @@ class InputView: UIView {
     }()
     
     private lazy var verticalStackView: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [prevHashLabel, dataContainer, difficultyContainer, nonceContainer, currentHashLabel, addButton])
+        let view = UIStackView(arrangedSubviews: [prevHashLabel, dataContainer, difficultyContainer, nonceContainer, currentHashLabel, findButton, addButton])
         view.axis = .vertical
         view.spacing = 10 
         return view

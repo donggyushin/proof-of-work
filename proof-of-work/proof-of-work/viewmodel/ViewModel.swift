@@ -14,6 +14,7 @@ final class ViewModel {
     static let `default` = ViewModel()
     
     var cancellables: Set<AnyCancellable> = []
+    var findCorrectNonceCancellables: Set<AnyCancellable> = .init()
     let disposeBag = DisposeBag()
     
     @Published var prevHash: String = ""
@@ -32,7 +33,26 @@ final class ViewModel {
         let block: Block = .init(hash: currentHash, data: data)
         self.blocks.append(block)
         data = ""
-        nonce = 0 
+        nonce = 0
+    }
+    
+    public func findCorrectNonce() {
+        if data.isEmpty { return }
+        if canAddBlock { return }
+        
+        nonce += 1
+        
+        $currentHash.combineLatest($difficulty, $data).debounce(for: 0.1, scheduler: RunLoop.main).sink { [weak self] currentHash, difficulty, data in
+            var canAddBlock = true
+            String(currentHash.prefix(difficulty)).forEach({
+                if $0 != "0" { canAddBlock = false }
+            })
+            if canAddBlock == false {
+                self?.findCorrectNonce()
+            } else {
+                self?.findCorrectNonceCancellables.removeAll()
+            }
+        }.store(in: &findCorrectNonceCancellables)
     }
     
     private func bind() {
