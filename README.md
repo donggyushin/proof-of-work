@@ -1,2 +1,2 @@
 # proof-of-work
-Project that learning about 'proof of work' of blockchain tech
+Project that simulates 'proof of work' of blockchain tech
