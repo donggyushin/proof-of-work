@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0208C76B27F18CA7004FAD03 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0208C76A27F18CA7004FAD03 /* RxCocoa */; };
 		0208C76D27F18CA7004FAD03 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0208C76C27F18CA7004FAD03 /* RxSwift */; };
+		023D2C8427F18DCD00AAADDB /* BlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D2C8327F18DCD00AAADDB /* BlockCell.swift */; };
 		700331D727F0ABBE00D4694D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700331D627F0ABBE00D4694D /* AppDelegate.swift */; };
 		700331D927F0ABBE00D4694D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700331D827F0ABBE00D4694D /* SceneDelegate.swift */; };
 		700331DB27F0ABBE00D4694D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700331DA27F0ABBE00D4694D /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		023D2C8327F18DCD00AAADDB /* BlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCell.swift; sourceTree = "<group>"; };
 		700331D327F0ABBE00D4694D /* proof-of-work.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "proof-of-work.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		700331D627F0ABBE00D4694D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		700331D827F0ABBE00D4694D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				700331F327F0AC6B00D4694D /* InputView.swift */,
+				023D2C8327F18DCD00AAADDB /* BlockCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				700331FA27F0ADD200D4694D /* Hash.swift in Sources */,
 				700331DB27F0ABBE00D4694D /* ViewController.swift in Sources */,
 				700331F427F0AC6B00D4694D /* InputView.swift in Sources */,
+				023D2C8427F18DCD00AAADDB /* BlockCell.swift in Sources */,
 				700331D727F0ABBE00D4694D /* AppDelegate.swift in Sources */,
 				700331D927F0ABBE00D4694D /* SceneDelegate.swift in Sources */,
 			);
