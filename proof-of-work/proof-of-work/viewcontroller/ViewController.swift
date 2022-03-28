@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             blockInputView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            blockInputView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            blockInputView.rightAnchor.constraint(equalTo: view.rightAnchor)
+            blockInputView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+            blockInputView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
         ])
     }
 }
