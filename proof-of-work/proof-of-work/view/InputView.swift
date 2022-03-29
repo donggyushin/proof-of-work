@@ -50,6 +50,7 @@ class InputView: UIView {
     private lazy var difficultyContainer: UIStackView = {
         let view = UIStackView(arrangedSubviews: [difficultyLabel, difficultyUpButton, difficultyDownButton])
         view.axis = .horizontal
+        view.spacing = 8
         return view
     }()
     
@@ -79,6 +80,7 @@ class InputView: UIView {
     
     private lazy var nonceContainer: UIStackView = {
         let view = UIStackView(arrangedSubviews: [nonceLabel, nonceUpButton, nonceDownButton])
+        view.spacing = 8 
         view.axis = .horizontal
         return view
     }()
